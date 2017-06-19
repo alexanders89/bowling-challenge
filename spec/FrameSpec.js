@@ -28,4 +28,14 @@ describe('Frame', function(){
   expect( function(){frame.roll(4)}).toThrow(new Error("No more pins"))
   });
 
+  it('resets the score once pushed to the game score', function() {
+    game = new Game();
+    frame.roll(2);
+    frame.roll(2);
+    frame.updateGameScore();
+  expect(frame.getScore()).toEqual(0);
+  });
+
+
+
 });

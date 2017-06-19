@@ -1,3 +1,4 @@
+
 function Frame () {
   STARTING_SCORE = 0
   this.score = []
@@ -21,22 +22,7 @@ Frame.prototype.getScore = function (){
 return sum
 };
 
-// var sum = [1, 2, 3].reduce(add, 0);
-//
-// function add(a, b) {
-//     return a + b;
-// }
-//
-// console.log(sum); // 6
-
-
-
-//
-// var frame1 = new Frame
-// var frame2 = new Frame
-// var game   = new Game(frame1, frame2)
-//
-// frame1.roll(2, 8);
-// frame2.roll(0, 0);
-//
-// expect(game.getScore()).toEqual(10);
+Frame.prototype.updateGameScore = function(){
+  game.score.push(this.score)
+  this.score = []
+}
