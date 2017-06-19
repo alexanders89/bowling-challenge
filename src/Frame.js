@@ -11,6 +11,9 @@ Frame.prototype.roll = function (roll) {
   } else if
     (this.score.length >=2) {
     throw new Error("Only two rolls allowed per frame");
+  } else if
+    (this.score[0] + roll > 10) {
+    throw new Error("10 points max!");
   } else {
   this.score.push(roll)}
 };

@@ -36,6 +36,11 @@ describe('Frame', function(){
   expect(frame.getScore()).toEqual(0);
   });
 
+  it('will not allow more than 10 points per frame', function() {
+    frame.roll(6);
+    expect( function(){frame.roll(5)}).toThrow(new Error("10 points max!"))
+  });
+
 
 
 });
